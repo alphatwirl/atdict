@@ -65,3 +65,14 @@ def test_copy(obj):
     assert obj is not obj_copy
     assert obj._attrdict is not obj_copy._attrdict
 
+def test_deepcopy():
+    obj = atdict([('pt', 40.0), ('eta', 1.1), ('phi', 0.1)])
+    list_ = [1, 2, 3]
+    obj.list_ = list_
+    obj_copy = copy.deepcopy(obj)
+    assert obj == obj_copy
+    assert obj is not obj_copy
+    assert obj._attrdict is not obj_copy._attrdict
+    assert obj.list_ is not  obj_copy.list_
+
+##__________________________________________________________________||

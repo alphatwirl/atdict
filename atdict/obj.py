@@ -1,5 +1,6 @@
 # Tai Sakuma <tai.sakuma@gmail.com>
 import collections
+import copy
 
 ##__________________________________________________________________||
 class atdict(object):
@@ -31,6 +32,11 @@ class atdict(object):
 
     def __copy__(self):
         return self.__class__(self)
+
+    def __deepcopy__(self, memo):
+        ret = self.__class__()
+        super(atdict, ret).__setattr__('_attrdict', copy.deepcopy(self._attrdict))
+        return ret
 
     def __repr__(self):
         return '{}({})'.format(

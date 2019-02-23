@@ -1,6 +1,5 @@
 # Tai Sakuma <tai.sakuma@gmail.com>
 import collections
-import logging
 
 ##__________________________________________________________________||
 class atdict(object):
@@ -14,18 +13,16 @@ class atdict(object):
     def __init__(self, *args, **kwargs):
 
         try:
-            # First, assume args[0] is another instance of this class,
-            # and try to copy the contents of the instance.
+            # First, if `args[0]` is the only argument, assume it is
+            # another `atdict`, and try to copy the its contents.
+            if kwargs or len(args) != 1:
+                raise TypeError
             attrdict = collections.OrderedDict(args[0]._attrdict)
-        except (AttributeError, IndexError):
-            # Otherwise, all arguments are simply given to OrderedDict
-            # so that this class can be instantiated with any
-            # arguments that can instantiate OrderedDict.
+        except:
+            # Otherwise, all arguments are simply given to
+            # `OrderedDict` so that an `atdict` can be initialized
+            # with any arguments that can initialize `OrderedDict`.
             attrdict = collections.OrderedDict(*args, **kwargs)
-        else:
-            if len(args) > 1 or kwargs:
-                logger = logging.getLogger(__name__)
-                logger.warning('extra arguments are given: args={}, kwargs={}'.format(args[1:], kwargs))
 
         object.__setattr__(self, '_attrdict', attrdict)
         # self._attrdict = attrdict # this would cause infinite

@@ -1,7 +1,6 @@
 # Tai Sakuma <tai.sakuma@gmail.com>
-
 import copy
-import logging
+
 import pytest
 
 from atdict import atdict
@@ -33,35 +32,13 @@ def test_init_copy(obj):
     assert obj is not obj_copy
     assert obj._attrdict is not obj_copy._attrdict
 
-def test_init_copy_extra_args(obj, caplog):
-    with caplog.at_level(logging.INFO, logger = 'atdict.obj'):
+def test_init_copy_extra_args(obj):
+    with pytest.raises(Exception):
         obj_copy = atdict(obj, 1)
-    assert len(caplog.records) == 1
-    assert caplog.records[0].levelname == 'WARNING'
-    assert caplog.records[0].name == 'atdict.obj'
-    assert 'extra arguments' in caplog.records[0].msg
 
-    assert obj == obj_copy
-    assert obj is not obj_copy
-    assert obj._attrdict is not obj_copy._attrdict
-
-def test_init_copy_extra_kwargs(obj, caplog):
-    with caplog.at_level(logging.INFO, logger = 'scribblers.obj'):
+def test_init_copy_extra_kwargs(obj):
+    with pytest.raises(Exception):
         obj_copy = atdict(obj, A = 10)
-    assert len(caplog.records) == 1
-    assert caplog.records[0].levelname == 'WARNING'
-    assert caplog.records[0].name == 'atdict.obj'
-    assert 'extra arguments' in caplog.records[0].msg
-
-    assert obj == obj_copy
-    assert obj is not obj_copy
-    assert obj._attrdict is not obj_copy._attrdict
-
-def test_copy(obj):
-    obj_copy = copy.copy(obj)
-    assert obj == obj_copy
-    assert obj is not obj_copy
-    assert obj._attrdict is not obj_copy._attrdict
 
 def test_setattr_modify(obj):
     obj.pt = 50.0
@@ -74,3 +51,9 @@ def test_setattr_newattr(obj):
     assert obj == atdict([('pt', 40.0), ('eta', 1.1), ('phi', 0.1), ('mass', 15.0)])
 
 ##__________________________________________________________________||
+def test_copy(obj):
+    obj_copy = copy.copy(obj)
+    assert obj == obj_copy
+    assert obj is not obj_copy
+    assert obj._attrdict is not obj_copy._attrdict
+

@@ -4,7 +4,7 @@ import copy
 import logging
 import pytest
 
-from atdict.obj import atdict
+from atdict import atdict
 
 ##__________________________________________________________________||
 @pytest.fixture()

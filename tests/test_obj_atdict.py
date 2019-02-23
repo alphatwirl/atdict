@@ -1,6 +1,11 @@
 # Tai Sakuma <tai.sakuma@gmail.com>
 import copy
 
+try:
+    import cPickle as pickle
+except:
+    import pickle
+
 import pytest
 
 from atdict import atdict
@@ -13,6 +18,9 @@ def obj():
 ##__________________________________________________________________||
 def test_repr(obj):
     repr(obj)
+
+def test_pickle(obj):
+    pickle.dumps(obj)
 
 def test_attr(obj):
     assert obj.pt == 40.0

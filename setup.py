@@ -16,7 +16,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Tai Sakuma',
     author_email='tai.sakuma@gmail.com',
-    url='https://github.com/alphatwirl/atpbar',
+    url='https://github.com/alphatwirl/atdict',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

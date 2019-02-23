@@ -75,7 +75,7 @@ o1 = atdict([('foo', 40), ('bar', 'ham')])
 print(o1)
 ```
 
-It will prints.
+It will print.
 
 ```python
 atdict(foo=40, bar='ham')
@@ -210,7 +210,7 @@ atdict(foo=40, bar='ham')
 
 ## License
 
-- atpbar is licensed under the BSD license.
+- atdict is licensed under the BSD license.
 
 *****
 

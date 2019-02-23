@@ -53,6 +53,9 @@ class atdict(object):
     def __setattr__(self, name, value):
         self._attrdict[name] = value
 
+    def __delattr__(self, attr):
+        del self._attrdict[attr]
+
     def __eq__(self, other):
         return self._attrdict == other._attrdict
 

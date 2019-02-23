@@ -58,6 +58,10 @@ def test_setattr_newattr(obj):
     assert obj.mass == 15.0
     assert obj == atdict([('pt', 40.0), ('eta', 1.1), ('phi', 0.1), ('mass', 15.0)])
 
+def test_delattr(obj):
+    del obj.eta
+    assert obj == atdict([('pt', 40.0), ('phi', 0.1)])
+
 ##__________________________________________________________________||
 def test_copy(obj):
     obj_copy = copy.copy(obj)

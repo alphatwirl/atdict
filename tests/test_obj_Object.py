@@ -4,12 +4,12 @@ import copy
 import logging
 import pytest
 
-from atdict.obj import Object
+from atdict.obj import atdict
 
 ##__________________________________________________________________||
 @pytest.fixture()
 def obj():
-    return Object([('pt', 40.0), ('eta', 1.1), ('phi', 0.1)])
+    return atdict([('pt', 40.0), ('eta', 1.1), ('phi', 0.1)])
 
 ##__________________________________________________________________||
 def test_repr(obj):
@@ -25,17 +25,17 @@ def test_attr_raise(obj):
         obj.mass
 
 def test_init_no_args():
-    Object()
+    atdict()
 
 def test_init_copy(obj):
-    obj_copy = Object(obj)
+    obj_copy = atdict(obj)
     assert obj == obj_copy
     assert obj is not obj_copy
     assert obj._attrdict is not obj_copy._attrdict
 
 def test_init_copy_extra_args(obj, caplog):
     with caplog.at_level(logging.INFO, logger = 'atdict.obj'):
-        obj_copy = Object(obj, 1)
+        obj_copy = atdict(obj, 1)
     assert len(caplog.records) == 1
     assert caplog.records[0].levelname == 'WARNING'
     assert caplog.records[0].name == 'atdict.obj'
@@ -47,7 +47,7 @@ def test_init_copy_extra_args(obj, caplog):
 
 def test_init_copy_extra_kwargs(obj, caplog):
     with caplog.at_level(logging.INFO, logger = 'scribblers.obj'):
-        obj_copy = Object(obj, A = 10)
+        obj_copy = atdict(obj, A = 10)
     assert len(caplog.records) == 1
     assert caplog.records[0].levelname == 'WARNING'
     assert caplog.records[0].name == 'atdict.obj'
@@ -66,11 +66,11 @@ def test_copy(obj):
 def test_setattr_modify(obj):
     obj.pt = 50.0
     assert obj.pt == 50.0
-    assert obj == Object([('pt', 50.0), ('eta', 1.1), ('phi', 0.1)])
+    assert obj == atdict([('pt', 50.0), ('eta', 1.1), ('phi', 0.1)])
 
 def test_setattr_newattr(obj):
     obj.mass = 15.0
     assert obj.mass == 15.0
-    assert obj == Object([('pt', 40.0), ('eta', 1.1), ('phi', 0.1), ('mass', 15.0)])
+    assert obj == atdict([('pt', 40.0), ('eta', 1.1), ('phi', 0.1), ('mass', 15.0)])
 
 ##__________________________________________________________________||

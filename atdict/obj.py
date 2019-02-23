@@ -3,7 +3,7 @@ import collections
 import logging
 
 ##__________________________________________________________________||
-class Object(object):
+class atdict(object):
     """a simple class to represent an object in an event, e.g., a jet, muon.
 
     implemented as an attribute-access ordered dictionary

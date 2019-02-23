@@ -24,7 +24,7 @@ class atdict(object):
             # with any arguments that can initialize `OrderedDict`.
             attrdict = collections.OrderedDict(*args, **kwargs)
 
-        object.__setattr__(self, '_attrdict', attrdict)
+        super(atdict, self).__setattr__('_attrdict', attrdict)
         # self._attrdict = attrdict # this would cause infinite
                                     # recursion as __setattr__() is
                                     # implemented

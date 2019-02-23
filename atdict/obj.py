@@ -4,9 +4,10 @@ import logging
 
 ##__________________________________________________________________||
 class atdict(object):
-    """a simple class to represent an object in an event, e.g., a jet, muon.
+    """An attribute-access ordered dictionary
 
-    implemented as an attribute-access ordered dictionary
+    An `atdict` can be initialized with 1) another `atdict` or 2) any
+    arguments that can initialize `collections.OrderedDict`.
 
     """
 

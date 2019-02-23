@@ -2,7 +2,14 @@
 
 ## [Unreleased]
 
-#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.1...master))
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.2...master))
+
+## [0.9.2] - 2019-02-23
+
+**PyPI**: https://pypi.org/project/atdict/0.9.2/
+
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.1...v.0.9.2))
+- corrected url in setup.py, which is used as Homepage at PyPI
 
 ## [0.9.1] - 2019-02-23
 

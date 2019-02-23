@@ -56,6 +56,12 @@ class atdict(object):
     def __delattr__(self, attr):
         del self._attrdict[attr]
 
+    def __getstate__(self):
+        return self.__dict__
+
+    def __setstate__(self, dict):
+        super(atdict, self).__setattr__('__dict__', dict)
+
     def __eq__(self, other):
         return self._attrdict == other._attrdict
 

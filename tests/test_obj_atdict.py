@@ -20,7 +20,9 @@ def test_repr(obj):
     repr(obj)
 
 def test_pickle(obj):
-    pickle.dumps(obj)
+    p = pickle.dumps(obj)
+    obj2 = pickle.loads(p)
+    assert obj2 == obj
 
 def test_attr(obj):
     assert obj.pt == 40.0

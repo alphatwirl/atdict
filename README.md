@@ -2,7 +2,7 @@
 
 # atdict
 
-An attribute-access ordered dictionary in Python
+An attribute-access ordered dictionary
 
 *****
 

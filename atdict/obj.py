@@ -15,7 +15,7 @@ class atdict(object):
 
         try:
             # First, if `args[0]` is the only argument, assume it is
-            # another `atdict`, and try to copy the its contents.
+            # another `atdict`, and try to copy its contents.
             if kwargs or len(args) != 1:
                 raise TypeError
             attrdict = collections.OrderedDict(args[0]._attrdict)

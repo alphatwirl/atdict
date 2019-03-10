@@ -2,8 +2,14 @@
 
 ## [Unreleased]
 
-#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.2...master))
-- updated `README.md`, comments
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.3...master))
+
+## [0.9.3] - 2019-03-10
+
+**PyPI**: https://pypi.org/project/atdict/0.9.3/
+
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.2...v.0.9.3))
+- updated `README.md`, `MANIFEST.in`, comments
 
 ## [0.9.2] - 2019-02-23
 

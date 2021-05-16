@@ -1,4 +1,8 @@
-[![PyPI version](https://badge.fury.io/py/atdict.svg)](https://badge.fury.io/py/atdict) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/atdict/badges/version.svg)](https://anaconda.org/conda-forge/atdict) [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.2576006.svg)](https://doi.org/10.5281/zenodo.2576006) [![Build Status](https://travis-ci.org/alphatwirl/atdict.svg?branch=master)](https://travis-ci.org/alphatwirl/atdict) [![codecov](https://codecov.io/gh/alphatwirl/atdict/branch/master/graph/badge.svg)](https://codecov.io/gh/alphatwirl/atdict)
+[![PyPI version](https://badge.fury.io/py/atdict.svg)](https://badge.fury.io/py/atdict)
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/atdict/badges/version.svg)](https://anaconda.org/conda-forge/atdict)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.2576006.svg)](https://doi.org/10.5281/zenodo.2576006)
+[![Test Status](https://github.com/alphatwirl/atdict/workflows/Test/badge.svg)](https://github.com/alphatwirl/atdict/actions?query=workflow%3ATest)
+[![codecov](https://codecov.io/gh/alphatwirl/atdict/branch/master/graph/badge.svg)](https://codecov.io/gh/alphatwirl/atdict)
 
 # atdict
 
@@ -39,7 +43,8 @@ released as an independent package in 2019 as _atdict_.
 
 ## Requirement
 
-- Python 2.7, 3.6, or 3.7
+- Python 3.6, 3.7, 3.8, or 3.9
+
 
 *****
 
@@ -221,5 +226,5 @@ atdict(foo=40, bar='ham')
 
 ## Contact
 
-- Tai Sakuma - tai.sakuma@gmail.com
+- [Tai Sakuma](https://github.com/TaiSakuma) - tai.sakuma@gmail.com <span itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-3225-9861" href="https://orcid.org/0000-0003-3225-9861" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:text-top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a></span>
 

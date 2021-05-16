@@ -16,13 +16,6 @@ for example, `o.key_name` rather than `o['key_name']`. Only a minimum
 set of methods are implemented so as to minimize the chances of name
 conflicts.
 
-_atdict_ was originally developed in 2017 as the class
-[`Object`](https://github.com/alphatwirl/scribblers/blob/v0.10.0/scribblers/obj.py),
-in [_scribblers_](https://github.com/alphatwirl/scribblers), which
-represented _event objects_ in
-[_alphatwirl_](https://github.com/alphatwirl/alphatwirl). It was
-released as an independent package in 2019 as _atdict_.
-
 *****
 
 - [**Requirement**](#requirement)

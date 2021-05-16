@@ -2,8 +2,17 @@
 
 ## [Unreleased]
 
-#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.3...master))
-- updated `README.md`
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.4...main))
+
+## [0.9.4] - 2021-05-16
+
+**PyPI**: https://pypi.org/project/atdict/0.9.4/
+
+#### Changs from the previous release: ([diff](https://github.com/alphatwirl/atdict/compare/v0.9.3...v.0.9.4))
+- moved from Travis CI to GitHub Actions
+- changed the default branch to "main"
+- added tests on Python 3.8, 3.9
+- removed tests on Python 2.7
 
 ## [0.9.3] - 2019-03-10
 

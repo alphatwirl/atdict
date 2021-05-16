@@ -27,5 +27,11 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    packages=find_packages(exclude=['docs', 'tests'])
+    packages=find_packages(exclude=['docs', 'tests']),
+    extras_require={
+        'tests': [
+            'pytest>=6.2',
+            'pytest-cov>=2.11'
+        ]
+    }
 )
